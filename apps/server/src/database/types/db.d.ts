@@ -27,6 +27,19 @@ export type JsonValue = JsonArray | JsonObject | JsonPrimitive;
 
 export type Timestamp = ColumnType<Date, Date | string, Date | string>;
 
+export interface PagePermissions {
+  id: Generated<string>;
+  pageId: string;
+  userId: string | null;
+  groupId: string | null;
+  role: string;
+  addedById: string | null;
+  workspaceId: string;
+  createdAt: Generated<Timestamp>;
+  updatedAt: Generated<Timestamp>;
+  deletedAt: Timestamp | null;
+}
+
 export interface Attachments {
   createdAt: Generated<Timestamp>;
   creatorId: string;
@@ -292,6 +305,7 @@ export interface Workspaces {
 }
 
 export interface DB {
+  pagePermissions: PagePermissions;
   attachments: Attachments;
   authAccounts: AuthAccounts;
   authProviders: AuthProviders;

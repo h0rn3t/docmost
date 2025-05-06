@@ -46,6 +46,7 @@ function buildSpaceAdminAbility() {
   can(SpaceCaslAction.Manage, SpaceCaslSubject.Member);
   can(SpaceCaslAction.Manage, SpaceCaslSubject.Page);
   can(SpaceCaslAction.Manage, SpaceCaslSubject.Share);
+  can(SpaceCaslAction.Manage, SpaceCaslSubject.PagePermission);
   return build();
 }
 
@@ -57,6 +58,7 @@ function buildSpaceWriterAbility() {
   can(SpaceCaslAction.Read, SpaceCaslSubject.Member);
   can(SpaceCaslAction.Manage, SpaceCaslSubject.Page);
   can(SpaceCaslAction.Manage, SpaceCaslSubject.Share);
+  can(SpaceCaslAction.Manage, SpaceCaslSubject.PagePermission);
   return build();
 }
 

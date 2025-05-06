@@ -107,3 +107,7 @@ export type UpdatableAuthAccount = Updateable<Omit<AuthAccounts, 'id'>>;
 export type Share = Selectable<Shares>;
 export type InsertableShare = Insertable<Shares>;
 export type UpdatableShare = Updateable<Omit<Shares, 'id'>>;
+
+export type PagePermission = Selectable<PagePermissions>;
+export type InsertablePagePermission = Insertable<PagePermissions>;
+export type UpdatablePagePermission = Updateable<Omit<PagePermissions, 'id'>>;
